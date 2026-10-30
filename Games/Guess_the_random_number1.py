@@ -11,8 +11,9 @@ target = random.randint(1,100)
 prompt="Note: Number must be between 1 to 100 !!!"
 print(prompt)
 speaker.speak(prompt)
-
+count = 0
 while True:
+    count += 1
     prompt1="Guess the target number or enter 'Quit' to exit and end the game: "
     print(prompt1)
     speaker.speak(prompt1)
@@ -28,7 +29,7 @@ while True:
             speaker.speak(prompt2)
             break
         elif(userGuess == target):
-            prompt3="Congratulations!!! You have guessed the target number."
+            prompt3=f"Congratulations!!! You have guessed the target number with {count} guesses."
             print(prompt3)
             speaker.speak(prompt3)
             break
