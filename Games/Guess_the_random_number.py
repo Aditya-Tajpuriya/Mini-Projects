@@ -12,9 +12,9 @@ def speak(text):
 
 target = random.randint(1,100)
 speak("Note: Number must be between 1 to 100 !!!")
-
+count = 0
 while True:
-    
+    count +=1
     speak("Guess the target number or enter 'Quit' to exit and end the game: ")
     userGuess = input()
 
@@ -26,7 +26,7 @@ while True:
             speak("Invalid Number, Entered number is out of range. ")
             break
         elif(userGuess == target):
-            speak("Congratulations!!! You have guessed the target number.")
+            speak(f"Congratulations!!! You have guessed the target number with {count} guesses.")
             break
         elif(userGuess < target):
             speak("Your number is smaller than the targer number. Try Again")
